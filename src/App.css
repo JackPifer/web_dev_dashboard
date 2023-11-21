@@ -1,3 +1,113 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on wider screens */
+  }
+}
+
+.team-section, .project-section, .discussion-forum, .team-metrics {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 15px;
+}
+
+.team-member {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+margin: 0;
+}
+
+.team-member p {
+margin: 5px 0;
+}
+
+/*
+.team-list, .team-details {
+margin: 10px;
+padding: 10px;
+}
+*/
+.team-list {
+  max-height: 400px; /* Adjust this value based on your needs */
+  overflow-y: auto; /* Adds a scrollbar when content overflows */
+  margin: 10px;
+  padding: 10px;
+}
+
+.team-list div {
+cursor: pointer;
+margin-bottom: 5px;
+}
+
+
+.member-detail {
+border: 1px solid #ddd;
+padding: 10px;
+}
+
+
+.team-project {
+border: 1px solid #ddd;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+
+.team-project h3 {
+margin: 0;
+}
+
+
+.team-project p {
+margin: 5px 0;
+}
+
+
+.project-detail {
+border: 1px solid #ddd;
+padding: 10px;
+margin-top: 10px;
+}
+
+
+.project-list {
+  max-height: 400px; /* Adjust based on your design needs */
+  overflow-y: auto; /* Adds a scrollbar when content overflows */
+  margin: 10px;
+  padding: 10px;
+}
+/*
+.team-metrics {
+border: 1px solid #ddd;
+padding: 10px;
+margin-top: 10px;
+}
+
+
+.discussion-forum {
+border: 1px solid #ddd;
+padding: 10px;
+margin-top: 10px;
+}
+*/
+
+.discussion-forum input {
+margin-right: 5px;
+}
+
+
+
 .App {
   text-align: center;
 }
@@ -13,9 +123,10 @@
   }
 }
 
+/*
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,6 +134,37 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+*/
+
+.App-header {
+  background-color: #282c34;
+  padding: 10px 0;
+  font-size: calc(10px + 1vmin);
+  color: white;
+}
+
+.team-list div, .project-list div {
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.team-list div:hover, .project-list div:hover {
+  background-color: #eaeaea;
+}
+
+@media only screen and (max-width: 600px) {
+  .App-header {
+    height: 20px; /* Smaller height for smaller screens */
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+}
+
+
+/*.App-header h1 {
+  font-size: 24px; 
+}*/
 
 .App-link {
   color: #61dafb;
